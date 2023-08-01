@@ -1,0 +1,280 @@
+/* 'Noto Sans KR' */
+
+.academy {
+    max-width: 1200px;
+    margin:  0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 103px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.location img {
+    width: 34px;
+    height: 40px;
+}
+
+.location a {
+    display: block;
+    font-family: 'Noto Sans KR';
+    font-size: 24px;
+    font-weight: 500;
+    color: #333333;
+    border-bottom: 1px solid #333333;
+}
+
+.social {
+    display: flex;
+    gap: 12px;
+    align-content: inherit;
+}
+.social a {}
+.social a img {
+    width: 40px;
+    height: 40px;
+}
+
+.banner {
+    max-width: 1200px;
+    margin: 120px auto 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner .notice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 555px;
+    height: 70px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 14px;
+}
+.banner .notice h5 {
+    font-family: 'Noto Sans KR';
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 47px;
+}
+.banner .notice ul {}
+.banner .notice ul li {
+    display: flex;
+    align-items: center;
+}
+
+.banner .notice ul li a {
+    display: block;
+    font-family: 'Noto Sans KR';
+    font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 240px;
+    margin-right: 40px;
+}
+.banner .notice ul li span {
+    font-family: 'Noto Sans KR';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.banner .notice .arrows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.arrows img {
+    width: 20px;
+    cursor: pointer;
+}
+
+img.slick-disabled {
+	opacity: 0.3;
+}
+
+.prevArrow {
+    transform: rotate(-90deg) translateY(-28px);
+}
+
+.nextArrow {
+    transform: rotate(90deg) translateY(27px);
+}
+
+.e_catalog img{
+    height: 68px;
+}
+
+.search_link {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin:  0 auto 42px;
+}
+
+h2 {
+    font-family: 'Noto Sans KR';
+    font-size: 32px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 27px;
+}
+
+.search_box {
+    position: relative;
+}
+
+.search_box input {
+    width: 555px;
+    height: 78px;
+    border-radius: 16px;
+    border: 1px solid #707070;
+    padding: 0 30px 0 18px;
+    font-family: 'Noto Sans KR';
+    font-size: 20px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.search_box img {
+    position: absolute;
+    right: 30px;
+    top: 100px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.partner_contents .box {
+    display: flex;
+    align-items: center;
+    width: 555px;
+}
+
+
+.partner_contents .box a {
+    width: 100%;
+    height: 78px;
+    border: 1px solid #dddddd;
+}
+
+.partner_contents .box a:nth-of-type(1) {
+    border-radius: 16px 0 0 16px;
+    padding: 32px 71px;
+}
+
+.partner_contents .box a:nth-of-type(1) img {
+    height: 14px;
+}
+
+.partner_contents .box a:nth-of-type(2) {
+    border-radius: 0 16px 16px 0;
+    padding: 12px 50px 20px;
+}
+
+.partner_contents .box a:nth-of-type(2) img {
+    height: 46px;
+}
+
+.academy_category {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.academy_category img {
+    width: 134px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.cate {
+    margin-bottom: 250px;
+}
+
+.cate_tab {
+    display: flex;
+    gap: 10px;
+
+}
+
+.cate_tab div {
+    position: relative;
+    width: 134px;
+    height: 134px;
+}
+
+.cate_tab div img {
+    position: absolute;
+}
+
+.cate_tab div .red {
+    display: none;
+}
+
+.cate_tab div.on .red {
+    display: block;
+}
+
+.cate_tab div.active .red {
+    display: block;
+}
+
+.cate_tab div p {
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Noto Sans KR';
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.cate_tab div.on p {
+    color: #ffffff;
+}
+
+.cate_tab div.active p {
+    color: #ffffff;
+}
+
+.cate_con {
+    position: relative;
+}
+
+.cate_con ul {
+    position: absolute;
+    top: 22px;
+    width: 100%;
+    display: none;
+}
+
+.cate_con ul.on {
+    display: flex;
+    gap: 16px;
+}
+
+.cate_con ul li a {
+    display: inline;
+    width: 100%;
+    padding: 6px 18px;
+    font-family: 'Noto Sans KR';
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+    white-space: nowrap;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+}

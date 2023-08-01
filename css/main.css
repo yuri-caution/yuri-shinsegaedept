@@ -1,0 +1,859 @@
+
+.wrap {
+    margin-top: 103px;
+    width: 100%;
+    /* display: none; */
+}
+
+.slider_wrap {
+    height: calc(100vh - 103px);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider_wrap .slide_tab {
+    display: flex;
+    position: absolute;
+    top: 17%;
+    left: 14%;
+    z-index: 1;
+}
+
+.slide_tab > li {
+    width: 70px;
+    height: 49px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 5px 0 0 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.slide_tab > li .bar {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ffffff;
+}
+
+.slide_tab li.active {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 19px;
+    color: #ffffff;
+    padding: 0 0 0 8px;
+}
+
+.slide_tab > li.active .bar {
+    animation: progressBar 5s linear forwards;
+}
+
+@keyframes progressBar {
+	0% {width: 0;}
+	100% {width:100%;}
+}
+
+.slide_tab > li.on {
+    font-size: 19px;
+    color: #ffffff;
+    padding: 0 0 0 8px;
+}
+
+.slide_tab > li.on .bar {
+    width: 100%;
+}
+
+
+.slider_wrap .slide_tab .pause {
+    position: absolute;
+    bottom: -4px;
+    left: 245px;
+    background-image: url('../images/ico_kv_pause.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.slider_wrap .slide_tab .play {
+    position: absolute;
+    bottom: -4px;
+    left: 245px;
+    background-image: url('../images/ico_kv_play.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.slider {
+	font-size: 0;
+    left: 0;
+    width: 100%;
+}
+.slider .list {
+	position: relative;
+	height: 100vh;
+}
+.slider .list img {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    opacity: 0;
+}
+
+.slider .list p {
+	position: absolute;
+	top:24%;
+	left:17%;
+	width: 100%;
+	height: 100%;
+    font-family: 'Jeju Myeongjo';
+    font-size: 70px;
+    line-height: 1.2;
+    opacity: 0;
+}
+
+.slider .list p span {
+    font-family: 'Adobe Garamond Pro';
+    font-size: 80px;
+    line-height: 1;
+}
+
+
+.slider .slick-active .list p {
+    animation-name:fadeInLeft;
+    animation-duration:1.5s;
+    animation-fill-mode: forwards;
+}
+
+.slider .slick-active .list img {
+    animation-name:fadeInRight;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInRight {
+    0% {
+        width: 0;
+        opacity:0;
+    }
+    100% {
+        width: 100%;
+        opacity:1;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        transform:translateX(50px);
+        opacity:0;
+    }
+    100% {
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+
+.slider_wrap button {
+    position: absolute;
+    top: 58%;
+    left: 17%;
+    height: 30px;
+}
+
+.slider_wrap p {
+    position: absolute;
+    bottom: 15%;
+    left: 17%;
+    font-size: 14px;
+    color: #ffffff;
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.slider_wrap .arr_start {
+    position: absolute;
+    bottom: 130px;
+    left: 17%;
+    width: 1px;
+    height: 0;
+    background-color: #ffffff;
+    z-index: 10;
+}
+
+.slider_wrap .arr_end {
+    position: absolute;
+    bottom: 50px;
+    left: 17%;
+    width: 1px;
+    height: 1px;
+    background-color: #ffffff;
+    z-index: 10;
+    animation: end 1.5s 3s infinite reverse;
+}
+
+@keyframes end {
+    0% {height: 0;}
+    100% {height: 80px;}
+}
+
+.arr_spot {
+    position: absolute;
+    bottom: 50px;
+    left: 16.75%;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+
+
+
+
+.notice {
+    height: 72px;
+    width: 100%;
+    border-bottom: 1px solid #e1e0e1;
+    padding: 27px 0 22px 400px;
+    margin-bottom: 180px;
+}
+
+.notice div {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.notice div:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #222222;
+}
+
+.notice h4 {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.notice p {
+    color: #666666;
+    position: relative;
+}
+
+.notice p::before {
+    content: "";
+    position: absolute;
+    bottom: 4%;
+    left: -10px;
+    width: 1px;
+    height: 80%;
+    background-color: #8a8a8a;
+}
+
+.notice p::after {
+    content: url('../images/ico_channel_off.png');
+    position: absolute;
+    top: 15%;
+    left: 105%;
+    width: 100%;
+    height: 100%;
+}
+ 
+.notice div:hover p::after {
+    content: url('../images/ico_channel_on.png');
+    position: absolute;
+    top: 15%;
+    left: 105%;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.main {
+    max-width: 1380px;
+    margin:  0 auto;
+}
+
+.section {
+    width: 100%;
+    margin-bottom: 120px;
+}
+
+.section h2 {
+    font-size: 60px;
+    font-family: 'Adobe Garamond Pro';
+    font-weight: normal;
+    margin-bottom: 53px;
+    text-align: center;
+}
+
+
+/* section.news */
+
+.section.news > p {
+    font-size: 16px;
+    color: #666666;
+    font-weight: 500;
+    margin-bottom: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+}
+
+.section.news > p::before {
+    content: url('../images/news_ico_login.gif');
+}
+
+.section.news > p > span {
+    font-size: 17px;
+    font-weight: 600;
+    color: #222222;
+}
+
+.section.news > p > a {
+    font-size: 15px;
+    color: #8B714C;
+    position: relative;
+}
+
+.section.news > p > a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #8B714C;
+}
+
+.section.news .content_wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.section.news .content_wrap > a:hover .photo::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    background: rgba(31,31,31,0.2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.section.news .content_wrap > a:hover img {
+    transform: scale(1.05);
+}
+
+a .photo {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.8s;
+    width: 395px;
+}
+
+a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: all 0.8s;
+}
+
+.section.news .text {
+    padding: 20px 0 0 10px;
+    margin-bottom: 80px;
+}
+
+.text .category {
+    color: #8B714C;
+}
+
+.text .title {
+    font-size: 18px;
+    color: #222222;
+    margin: 10px 0;
+}
+
+.text .date {
+    color: #888888;
+}
+
+
+/* section.now */
+.section.now .cards {
+    display: flex;
+    gap: 43px;
+}
+
+.cards li {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.cards li div {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 30px 26px 40px;
+    border-top: 2px solid #F22C2D;
+    transition: all 0.5s;
+}
+
+.cards li img {
+    width: 291px;
+    display: block;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.cards li a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #BEA36B;
+    position: relative;
+}
+
+.cards li a::after {
+    content: url('../images/ico_hotnew_link.png');
+    position: absolute;
+    top: 0;
+    right: -43px;
+    width: 15px;
+    height: 12px;
+
+}
+
+.cards li p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 15px 0 25px;
+}
+
+.cards li div button {
+    border: none;
+    background-color: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #bbbbbb;
+    position: relative;
+}
+
+.cards li div button::after {
+    content: url('../images/ico_hotnew_more.png');
+    position: absolute;
+    top: 0;
+    right: -21px;
+    width: 5px;
+    height: 6px;
+}
+
+.link_area {
+    margin-top: 85px;
+    text-align: center;
+}
+
+.link_area > a {
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #444444;
+    font-weight: bold;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.link_area > a::after {
+    content: url('../images/ico_channel_off.png');
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 15px;
+    height: 15px;
+}
+
+.link_area > a:hover::after {
+    content: url('../images/ico_channel_on.png');
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 15px;
+    height: 15px;
+}
+
+.link_area p {
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+.link_area ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+
+/* section.art */
+
+.section.art {
+    margin-bottom: 180px;
+}
+
+.slide_area {
+}
+
+#text_wrap {
+    position: absolute;
+    top: 51%;
+    left: 0;
+    width: calc(100% - 813px);
+    height: 480px;
+    padding: 131px 185px 55px 350px;
+}
+
+#text_wrap p {
+    color: #E0C799;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    margin-bottom: 11px;
+}
+
+#title, #from {
+    color: #ffffff;
+    font-family: 'Jeju Myeongjo';
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+#title {
+    margin-bottom: 50px;
+}
+
+#text_wrap .white {
+    margin-bottom: 50px;
+}
+
+#text_wrap .btns {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+
+.slide_wrap {
+    margin-top: 100px;
+    margin-left: 750px;
+    display: flex;
+    z-index: 50;
+    width: 100vh;
+}
+
+.slide img {
+    display: inline-block;
+    width: 480px;
+}
+
+
+/* section.brand */
+
+.section.brand {
+    position: relative;
+}
+
+.tab_slick div img {
+    height: 138px;
+}
+
+.tab_slick .slick-slide {
+    opacity: 0.5;
+}
+
+.tab_slick .slick-center {
+    opacity: 1;
+    transition: opacity 0.3s linear;
+}
+
+.prevArrow, .nextArrow {
+    position: absolute;
+    top: 180px;
+    width: 40px;
+}
+
+.prevArrow {
+    left: 33%;
+}
+.nextArrow {
+    left: 67%;
+}
+
+.prevArrow img {
+    transform: rotate(180deg);
+}
+
+.prevArrow img, .nextArrow img {
+    display: inline;
+    cursor: pointer;
+}
+
+.gallery_wrap {
+    position: relative;
+}
+
+.gallery_wrap.onoma,
+.gallery_wrap.boontheshop {
+    display: none;
+}
+
+.brand_desc {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1;
+}
+
+.brand_desc {
+    max-width: 426px;
+    text-align: center;
+    padding: 100px 33px 0;
+    color: #666666;
+}
+
+.brand_desc h3 {
+    font-family: 'Jeju Myeongjo';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #222222;
+}
+
+.brand_desc p {
+    font-weight: 100;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+.brand_desc a {
+    display: inline-block;
+    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid #666666;
+}
+
+.popup-gallery {
+    width: 1278px;
+    margin: 0 auto;
+    border: 1px solid rgba(31, 31, 31, 0.2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 80px;
+}
+
+.popup-gallery a {
+    width: 426px;
+    height: 426px;
+}
+
+.popup-gallery a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup-gallery a video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.simple-ajax-popup {
+    overflow: hidden;
+    position: relative;
+}
+
+.simple-ajax-popup img,
+.simple-ajax-popup video {
+    position: relative;
+    transition: all 0.7s;
+}
+
+.simple-ajax-popup:hover img,
+.simple-ajax-popup:hover video {
+    transform: scale(1.05);
+}
+
+.simple-ajax-popup:hover::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    background: rgba(31,31,31,0.2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mfp-arrow {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.mfp-arrow::after, .mfp-arrow::before {
+    display: none !important;
+}
+
+.mfp-arrow-left {
+    left: 18% !important;
+    background-image: url(../images/btn_arrow_prev_white.png) !important;
+    
+}
+
+.mfp-arrow-right {
+    right: 18% !important;
+    background-image: url(../images/btn_arrow_next_white.png) !important;
+}
+
+
+
+
+/* section.magazine */
+
+.section.magazine {}
+
+.magazine_wrap {
+    display: flex;
+}
+
+.movie_area {
+    width: 426px;
+    height: 564px;
+    padding-right: 40px;
+}
+
+.movie {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+video {
+    width: 363px;
+    height: 454px;
+}
+
+.video_btns {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    right: -63%;
+    width: 100%;
+}
+
+.movie_area .text {
+    text-align: center;
+}
+
+.movie_area .text p {
+    color: #666666;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.movie_area .text h3 {
+    font-size: 30px;
+    font-family: 'Adobe Garamond Pro';
+    font-weight: normal;
+    color: #222222;
+}
+
+
+.scroll_area {
+    max-height: 100vh;
+    overflow-y: scroll;
+    margin-bottom: 80px;
+}
+
+.scroll_area::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll_area ul {
+    display: flex;
+}
+.scroll_area ul li {
+    border-left: 1px solid rgba(31, 31, 31, 0.3);
+}
+.scroll_area ul li a {}
+.scroll_area ul li a {}
+
+.tumb {
+    width: 256px;
+    margin: 0 20px 105px;
+}
+
+.tumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid rgba(31, 31, 31, 0.2);
+}
+
+.tumb h5, .tumb p {
+    padding-left: 10px;
+}
+
+.tumb h5 {
+    margin: 30px 0 10px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #222222;
+
+}
+
+.tumb p {
+    line-height: 1.8;
+    font-weight: 200;
+    color: #666666;
+    letter-spacing: -0.5px;
+}

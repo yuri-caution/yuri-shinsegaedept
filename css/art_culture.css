@@ -1,0 +1,181 @@
+.sub_header {
+    width: 100%;
+    height: 60px;
+    background-color: #222222;
+    color: #949494;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 113px;
+}
+
+.sub_header li a.on {
+    color: #ffffff;
+    position: relative;
+}
+
+.sub_header li a.on::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #BEA36B;
+}
+
+.wrap {
+    background-image: url('../images/page4-1/intro-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 140px 0 160px;
+}
+
+.main_logo {
+    width: 282px;
+    height: 119px;
+    margin: 0 auto 100px;
+    background-image: url('../images/page4-1/logo-line.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22.5px;
+}
+
+.main_logo img {
+    width: 100%;
+}
+
+.btns {
+    position: relative;
+}
+.goTo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 120px;
+}
+
+.goTo a {
+    display: block;
+    width: 300px;
+    height: 160px;
+    border-radius: 16px;
+    background-color: #D0000C;
+    text-align: center;
+    line-height: 160px;
+    color: #333333;
+    font-family: 'Noto Sans KR';
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.goTo a p {
+    display: inline;
+    position: relative;
+    color: #ffffff;
+    padding-right: 16px;
+}
+
+.goTo a p::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%) rotate(-45deg);
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+.goTo a:nth-of-type(2) {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.goTo a:nth-of-type(2) p {
+    color: #333333;
+    padding-left: 48px;
+}
+
+.goTo a:nth-of-type(2) p::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/page4-1/on_logo.png');
+    background-size: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.goTo a:nth-of-type(2) p::after {
+    border-bottom: 2px solid #333333;
+    border-right: 2px solid #333333;
+}
+
+.spot {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Noto Sans KR';
+    border-bottom: 1px solid #ffffff;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -40px;
+    left: 39%;
+    opacity: 0.8;
+}
+
+
+.partner {
+    width: 851px;
+    height: 296px;
+    border-radius: 27px;
+    background-color: #d9d9d9;
+    margin:  0 auto;
+    padding: 24px 50px 0;
+    position: relative;
+}
+
+.partner h4 {
+    font-family: 'Noto Sans KR';
+    font-size: 24px;
+    color: #666666;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.partner > img {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+}
+
+.partner > img:nth-of-type(1) {
+    left: 50px;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.apps {
+    display: flex;
+    gap: 230px;
+    align-items: center;
+    justify-content: center;
+}
+
+.apps img {
+    height: 149px;
+    cursor: pointer;
+}
