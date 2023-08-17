@@ -287,7 +287,7 @@ header {
     background-color: #d1d1d1;
 }
 
-.moblie_spot, .select_store {
+.moblie_spot, .select_store, .side_menu {
     display: none;
 }
 
