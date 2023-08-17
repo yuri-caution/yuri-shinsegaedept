@@ -840,6 +840,7 @@ header {
 
 
 .side_menu {
+    display: block;
     position: absolute;
     top: 550px;
     left: -90%;
