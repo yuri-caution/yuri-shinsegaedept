@@ -893,6 +893,11 @@ video {
 }
 
 
+#modal {
+    display: none;
+}
+
+
 
 
 @media (max-width: 1020px) {
@@ -1419,4 +1424,61 @@ video {
     display: none;
 }
 
+
+
+#modal {
+    position: absolute;
+    top: calc(100vh - 240px);
+    left: 0;
+    width: 100%;
+    height: 180px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px 12px 0 0;
+    font-family: 'TmoneyRoundWind';
+    color: #ffffff;
+    padding: 24px 28px 10px;
+}
+
+#modal > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#modal > div p {
+    font-size: 15px;
+    font-size: 500;
+}
+
+#modal > div img {
+    width: 46px;
+}
+
+#modal .app_btn {
+    width: 331px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #DE021C;
+    font-weight: 600;
+    padding: 0 132px;
+    font-size: 13px;
+    margin: 24px 0 16px;
+}
+
+#modal > p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes modal-ani {
+    0% {transform: translateY(0)}
+    99% {transform: translateY(180px)}
+    100% {display: none}
+}
+
+@keyframes modal-load {
+    0% {transform: translateY(180px)}
+    100% {transform: translateY(0)}
+}
 }

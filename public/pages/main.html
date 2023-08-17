@@ -491,6 +491,15 @@
                 </button>
             </div>
 
+    <div id="modal">
+        <div>
+            <p>신세계APP에서 더 많은<br>이벤트와 혜택을 받아보세요!</p>
+            <img src="../images/mobile/logo_icon.png" alt="신세계 앱">
+        </div>
+        <div class="app_btn">앱으로 보기</div>
+        <p>오늘 하루 보지 않기</p>
+    </div>
+
     </div>
     <div class="footer"></div>
     <script src="../js/banner.js"></script>
@@ -544,55 +553,16 @@
             console.log('재생')
             $('.slide_tab > li.on').attr('class', 'active')
         })
-            
 
-        // $(window).ready(function(){
-        //     start();
-        // })
-
-        // function start (){
-        //     var index = 0
-        //     $('.slide_bg li').eq(index).addClass('active')
-        //     $('.slide_tab li').eq(index).addClass('active')
-        //     var play = setInterval(function (){
-        //         var nextIndex = (index+1) % $('.slide_bg li').length
-        //         $('.slide_bg li').eq(nextIndex).addClass('active').siblings().removeClass('active')
-        //         $('.slide_tab li').eq(nextIndex).addClass('active').siblings().removeClass('active')
-        //         index = nextIndex
-        //     }, 5000)
-        // };
+        $(window).ready(function(){ 
+            if (window.innerWidth < 1021) {
+                $('#modal').css('animation', 'modal-load 0.5s forwards')
+            }
+        })
         
-        // $('.slide_tab li').click(function(){
-        //     var idx = $(this).index()
-        //     $(this).addClass('active').siblings().removeClass('active')
-        //     $('.slide_bg li').eq(idx).addClass('active').siblings().removeClass('active')
-        //     clearInterval(play)
-        //     var newplay = setInterval(function (){
-        //         index = idx
-        //         var nextIndex = (index+1) % $('.slide_bg li').length
-        //         $('.slide_bg li').eq(nextIndex).addClass('active').siblings().removeClass('active')
-        //         $('.slide_tab li').eq(nextIndex).addClass('active').siblings().removeClass('active')
-        //         index = nextIndex
-        //     }, 5000)
-        // })
-
-        // $('.play').click(function(){
-        //     if(!$(this).hasClass('pause')){
-        //         // autoplay: false
-        //         $(this).addClass('pause')
-        //         clearInterval(play)
-        //         if($('.slide_tab li').hasClass('active')){
-        //             $('.slide_tab li.active').attr('class', 'on');
-        //             $('.slide_tab li.active .bar').css('animation', 'none')
-        //         }
-        //     }else {
-        //         $(this).removeClass('pause')
-        //         $(window).prop("location", location.href);
-        //     }
-        // })
-
-
-
+        $('#modal > p').click(function(){
+            $('#modal').css('animation', 'modal-ani 0.5s forwards')
+        })
         
         
     </script>

@@ -6,6 +6,8 @@
 @import url('https://fonts.cdnfonts.com/css/adobe-garamond-pro-2');
 /* font-family: 'Jeju Myeongjo', serif; */
 @import url('//fonts.googleapis.com/earlyaccess/jejumyeongjo.css');
+/* font-family: 'TmoneyRoundWind'; */
+@import url('https://webfontworld.github.io/tmoney/TmoneyRoundWind.css');
 
 
 * {
@@ -147,6 +149,10 @@ header {
 
 }
 
+.moblie_menu_bar, .moblie_menu {
+    display: none;
+}
+
 .gnb {
     width: 695px;
     display: flex;
@@ -279,6 +285,10 @@ header {
     height: 15px;
     width: 1px;
     background-color: #d1d1d1;
+}
+
+.moblie_spot, .select_store {
+    display: none;
 }
 
 
@@ -544,6 +554,13 @@ header {
     padding: 22px 24px 23px 20px;
 }
 
+.moblie_menu_bar {
+    display: block;
+    width: 20px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
 .logo {
     height: 15px;
     margin: 0 auto;
@@ -553,13 +570,326 @@ header {
     height: 100%;
 }
 
+.dimm {
+    position: absolute;
+    top: 0;
+    left: -101%;
+    width: 101%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.7;
+}
+
+.moblie_menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -90%;
+    width: 90%;
+    height: 207px;
+    background-color: #ffffff;
+    padding: 22px 20px 0 25px;
+    z-index: 1;
+    border-bottom: 1px solid #eeeeee;
+    transition: all 0.5s;
+}
+
+.moblie_menu .top_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+.moblie_menu .top_btn img:nth-of-type(2) {
+    width: 35px;
+}
+
+.moblie_menu p {
+    font-size: 12px;
+    color: #111111;
+    line-height: 2;
+}
+
+.moblie_menu p a {
+    color: #8A714E;
+    text-decoration: underline;
+}
+
+
 .gnb {
+    position: absolute;
+    top: 207px;
+    left: -90%;
+    width: 90%;
+    display: block;
+    background-color: #F8F8F8;
+    padding: 22px 0 22px 21px;
+    transition: all 0.5s;
+}
+
+.gnb > li {
+    position: relative;
+    width: 198px;
+    font-family: 'Jeju Myeongjo';
+    position: relative;
+}
+
+.gnb > li::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 84%;
+    background-image: url('../images/mobile/btn_arrow_link.png');
+    background-position: center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.gnb > li > a {
+    display: block;
+    height: 45px;
+    color: #222222;
+    line-height: 45px;
+}
+
+.gnb > li:hover > a {
+    color: #f22c2d;
+    border-bottom: 2px solid #f22c2d;
+}
+
+.gnb > li> a::after {
+    content: '';
+    position: absolute;
+    top: 68px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 50px);
+    height: 2px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gnb > li:hover > a::after {
+    opacity: 1;
+}
+
+.gnb > li> a.active {
+    font-size: 15.5px;
+    color: #F22C2D;
+}
+
+.gnb ul {
+    position: fixed;
+    top: 113px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100vh;
+    margin: 0 auto;
+    padding: 30px 0 58px;
+    z-index: 1;
+    white-space: nowrap;
     display: none;
+    justify-content: center;
+}
+
+.gnb > li.on ul {
+    display: flex;
+}
+
+.gnb > li.on ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -300%;
+    width: 800%;
+    height: 100%;
+    z-index: -1;
+    background-color: #ffffff;
+    box-shadow: 5px 3px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes subMenuBg {
+    0% {height: 0;}
+    100% {height: 100%;}
+}
+
+.gnb ul li {
+    margin: 0 auto;
+}
+
+.gnb ul li div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gnb ul li p {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.gnb ul li a {
+    display: block;
+    padding: 8px 0;
+    text-align: left;
+    font-size: 13px;
+    color: #666;
+    width: 120px;
 }
 
 .gnb_btn {
     display: none;
 }
+
+.moblie_spot {
+    display: block;
+    font-size: 10px;
+    margin-right: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.moblie_spot::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -76%;
+    background-image: url('../images/mobile/ico_selectStore\ 1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.select_store {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 422px;
+    background-color: #ffffff;
+    display: none;
+}
+
+.select_store .spot_name {
+    display: block;
+    widows: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    padding-right: 22px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.select_store .spot_name::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -40px;
+    background-image: url('../images/mobile/ico_selectStore\ 1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.select_store .spot_name .close {
+    position: absolute;
+    top: 23px;
+    right: 22px;
+    z-index: 1;
+}
+
+.select_store ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin-bottom: 42px;
+}
+.select_store ul li {
+    height: 54px;
+    padding-top: 16px;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 13px;
+}
+
+.select_store ul .selected {
+    color: #F22C2D;
+}
+
+.select_store ul li:nth-of-type(6) {
+    padding: 0;
+    padding-top: 10px;
+}
+
+.select_store > a {
+    display: block;
+    text-align: center;
+    color: #222222;
+    text-decoration: underline;
+}
+
+
+.side_menu {
+    position: absolute;
+    top: 550px;
+    left: -90%;
+    width: 90%;
+    height: 204px;
+    background-color: #eeeeee;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #666666;
+    transition: all 0.5s;
+}
+
+.app_down {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 74px;
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+    padding: 0 30px;
+    font-size: 11px;
+}
+
+.app_down span {
+    font-weight: 600;
+}
+.app_down img {
+    width: 35px;
+}
+
+.channel {
+    height: 62px;
+    line-height: 62px;
+    padding: 0 30px;
+    border-bottom: 1px solid #dddddd;
+    font-weight: 400;
+}
+
+.lang_moblie {
+    height: 68px;
+    line-height: 68px;
+    display: flex;
+    padding: 0 30px;
+    gap: 28px;
+    color: rgba(102, 102, 102, 0.5);
+}
+
+.lang_moblie .selected_lang {
+    color: rgba(102, 102, 102, 1);
+}
+
 
 
 /* footer */

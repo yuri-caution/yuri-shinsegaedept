@@ -23,7 +23,18 @@
                 <p>SSG.COM</p>
             </div>
         </div>
+        <div class="dimm"></div>
         <header>
+            <div class="moblie_menu_bar"><img src="../images/mobile/mobli_menu.png" alt="모바일 메뉴 버튼"></div>
+            <div class="moblie_menu">
+                <div class="top_btn">
+                    <img class="top_close" src="../images/mobile/btn_pop_close.png" alt="닫기 버튼">
+                    <img src="../images/mobile/gnb_ico_search (1).png" alt="검색 버튼">
+                </div>
+                <p>안녕하세요 고객님,<br>
+                    <a href="#,">로그인</a> 하시면 맞춤 컨텐츠를 보다 편리하게<br>
+                    이용하실 수 있습니다.</p>
+            </div>
             <a href="../pages/main.html" class="logo">
                 <img src="../images/gnb_logo.png" alt="신세계백화점 로고">
             </a>
@@ -230,6 +241,44 @@
                     <img src="../images/gnb_ico_search.png" alt="검색">
                 </a>
             </div>
+            <div class="moblie_spot">센텀시티</div>
+            <div class="select_store">
+                <div class="spot_name">
+                    센텀시티
+                    <img class="close" src="../images/mobile/btn_pop_close.png" alt="닫기 버튼">
+                </div>
+                <ul>
+                    <li>강남점</li>
+                    <li>경기점</li>
+                    <li>광주신세계</li>
+                    <li>김해점</li>
+                    <li>대구신세계</li>
+                    <li>대전신세계<br>Art & Science</li>
+                    <li>마산점</li>
+                    <li>본점</li>
+                    <li class="selected">센텀시티</li>
+                    <li>스타필드 하남점</li>
+                    <li>의정부점</li>
+                    <li>천안아산점</li>
+                    <li>타임스퀘어점</li>
+                </ul>
+                <a href="#;">센텀시티 점포안내 바로가기</a>
+            </div>
+
+            <div class="side_menu">
+                <div class="app_down">
+                    <img src="../images/mobile/logo_icon.png" alt="신세계백화점 APP">
+                    <p><span>신세계백화점 APP</span><br>라이프 스타일에 프리미엄을 더하다.</p>
+                </div>
+                <div class="channel">
+                    SHINSEGAE CHANNEL
+                </div>
+                <div class="lang_moblie">
+                    <p class="selected_lang">KR</p>
+                    <p>EN</p>
+                    <p>CN</p>
+                </div>
+            </div>
         </header>
 
         <div class="login_toggle">
@@ -263,11 +312,39 @@
     </div>
 
     <script>
-        // $('.gnb > li').hover(function(){
-        //     $(this).find('ul').slideDown()
-        // }, function(){
-        //     $(this).find('ul').hide()
-        // })
+        $(window).resize(function(){ 
+            if (window.innerWidth < 1021) {
+                
+            }else{
+                $('.gnb > li').hover(function(){
+                    $(this).find('ul').slideDown()
+                }, function(){
+                    $(this).find('ul').hide()
+                })
+            }
+        })
+
+        $('.moblie_menu_bar').click(function(){
+            $('.dimm').css('left', 0)
+            $('.moblie_menu').css('left', '-1px')
+            $('.gnb').css('left', '-1px')
+            $('.side_menu').css('left', '-1px')
+        })
+
+        $('.top_close').click(function(){
+            $('.dimm').css('left', '-101%')
+            $('.moblie_menu').css('left', '-90%')
+            $('.gnb').css('left', '-90%')
+            $('.side_menu').css('left', '-90%')
+        })
+
+        $('.moblie_spot').click(function(){
+            $('.select_store').slideDown()
+        })
+        
+        $('.close').click(function(){
+            $('.select_store').slideUp()
+        })
     </script>
 </body>
 </html>
