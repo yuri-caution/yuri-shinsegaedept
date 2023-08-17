@@ -1438,6 +1438,7 @@ video {
     font-family: 'TmoneyRoundWind';
     color: #ffffff;
     padding: 24px 28px 10px;
+    z-index: 999;
 }
 
 #modal > div {
