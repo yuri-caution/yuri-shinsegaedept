@@ -8,10 +8,10 @@ $(function(){
 
     //로그인
     $(".login").click(()=>{
-        $(".login_toggle").slideDown(1000);
         $('header').css('border-bottom', 'white')
         $('.slide_tab .play').fadeOut(1000)
         $('.id_box').focus()
+        $(".login_toggle").slideDown('slow');
     });
     
     $(".login_toggle .close").click(()=>{

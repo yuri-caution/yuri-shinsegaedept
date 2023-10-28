@@ -103,7 +103,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: end;
-    padding-right: 70px;
+    padding-right: 80px;
     gap: 40px;
     border-bottom: 1px solid #f0f0f0;
 }
@@ -140,12 +140,13 @@ img {
 
 header {
     max-width: 1760px;
-    margin:  0 auto;
+    margin: 0 auto;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
+    padding: 0 80px;
 
 }
 

@@ -1,5 +1,6 @@
 
 .wrap {
+    min-width: 1380px;
     margin-top: 103px;
     width: 100%;
     /* display: none; */
@@ -304,12 +305,13 @@
 
 .main {
     max-width: 1380px;
-    margin:  0 auto;
+    min-width: 1280px;
+    margin: 0 auto;
 }
 
 .section {
     width: 100%;
-    margin-bottom: 120px;
+    margin-bottom: 166px;
 }
 
 .section h2 {
@@ -368,6 +370,7 @@
 
 .section.news .content_wrap {
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
 }
 
 .section.news .content_wrap > a:hover .photo::after {
@@ -428,6 +431,7 @@ a .photo img {
 .section.now .cards {
     display: flex;
     gap: 43px;
+    justify-content: center;
 }
 
 .cards li {
@@ -545,16 +549,16 @@ a .photo img {
 /* section.art */
 
 .section.art {
-    margin-bottom: 180px;
+    margin-bottom: 280px;
 }
 
 #text_wrap {
     position: absolute;
     top: 51%;
     left: 0;
-    width: calc(100% - 713px);
+    width: 60%;
     height: 480px;
-    padding: 131px 185px 55px 350px;
+    padding: 131px 185px 55px 250px;
 }
 
 #text_wrap p {
@@ -598,15 +602,15 @@ a .photo img {
 
 .slide_wrap {
     position: absolute;
-    top: 100px;
-    right: -53%;
+    top: 160px;
+    right: -50%;
     display: flex;
     z-index: 50;
     width: 100vh;
 }
 
 .slide {
-    width: 480px;
+    width: 480px !important;
     overflow: hidden;
     border: 1px solid #e5e5e5;
 }
@@ -618,8 +622,10 @@ a .photo img {
 }
 
 .slick-slide {
-    margin: 0 30px 0 0;
+    /* margin-right: 30px; */
 }
+
+
 
 /* section.brand */
 
@@ -797,6 +803,7 @@ a .photo img {
 
 .magazine_wrap {
     display: flex;
+    justify-content: center;
 }
 
 .movie_area {
@@ -1162,7 +1169,6 @@ a .photo img {
 .section.now .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 180px 20px;
 }
 
 .cards li {
